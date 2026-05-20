@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="FluxMind 流思舱 — AI 智伴自托管 Web3 钱包" />
+    <title>FluxMind · 流思舱</title>
+  </head>
+  <body>
+    <div id="boot-hint">
+      <h1>FluxMind</h1>
+      <p id="boot-msg">Loading TokenCore WASM…</p>
+    </div>
+    <div id="root"></div>
+    <script>
+      if (location.protocol === "file:") {
+        document.getElementById("boot-msg").textContent =
+          "请运行 npm install && npm run dev，再打开 http://localhost:5191";
+      }
+    </script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
